@@ -1,28 +1,31 @@
-<?php
+<?php 
 
-namespace Usuario;
+namespace Site;
+
 use Zend\Router\Http\Literal;
+use Zend\Router\Http\Segment;
+use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
         'routes' => [
-            'usuario' => [
+            'sitehome' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/usuario',
+                    'route'    => '/home',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action'     => 'index',
+                        'action'     => 'home',
                     ],
                 ],
             ],
-            'login' => [
-                'type' => Literal::class,
+            'siteservicos' => [
+                'type'    => Literal::class,
                 'options' => [
-                    'route' => '/login',
+                    'route'    => '/servicos',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action' => 'login',
+                        'action'     => 'servicos',
                     ],
                 ],
             ],

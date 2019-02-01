@@ -15,4 +15,6 @@ return [
     'Zend\Validator',
     'Application',
     'Usuario',
+    'Site',
+    
 ];
